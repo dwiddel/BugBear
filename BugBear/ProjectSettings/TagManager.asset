@@ -17,6 +17,7 @@ TagManager:
   - EnemyFollow
   - EnemySpin
   - EnemyBig
+  - BubbleShield
   layers:
   - Default
   - TransparentFX

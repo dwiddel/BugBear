@@ -19,6 +19,7 @@ namespace Player
         public float speed;
         public Boundary boundary;
         public GameObject shot;
+        public GameObject shield;
         public Transform shotSpawn;
         public float fireRate;
         public VirtualJoystick moveJoystick;
@@ -28,6 +29,8 @@ namespace Player
         public GameObject[] enemyFollow;
         public bool splitShot;
         public float splitShotOnTimer = 5;
+        public float shieldOnTimer = 6;
+        
 
         private void Awake()
         {
@@ -38,6 +41,10 @@ namespace Player
         private void Update()
         {
             moveJoystick = GameObject.Find("VirtualJoystickContainer").GetComponent<VirtualJoystick>();
+            if (Input.GetKeyDown("space"))
+            {
+                StartCoroutine(ShieldTimer());
+            }
         }
 
         void FixedUpdate()
@@ -102,13 +109,25 @@ namespace Player
                 other.gameObject.SetActive(false);
                 StartCoroutine(SplitShotTimer());
             }
-
-            IEnumerator SplitShotTimer()
+            if (other.gameObject.CompareTag("Shield"))
             {
-                splitShot = true;
-                yield return new WaitForSeconds(splitShotOnTimer);
-                splitShot = false;
+                other.gameObject.SetActive(false);
+                StartCoroutine(ShieldTimer());
             }
+        }
+
+        IEnumerator SplitShotTimer()
+        {
+            splitShot = true;
+            yield return new WaitForSeconds(splitShotOnTimer);
+            splitShot = false;
+        }
+
+        IEnumerator ShieldTimer()
+        {
+            shield.SetActive(true);
+            yield return new WaitForSeconds(shieldOnTimer);
+            shield.SetActive(false);
         }
     }
 }

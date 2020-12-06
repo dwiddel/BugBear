@@ -61,9 +61,9 @@ namespace Player
             {
                 return;
             }
-            else if (other.tag == "GameController")
+            else if (other.tag == "BubbleShield")
             {
-                return;
+                StartCoroutine(DeathAnimation());
             }
             else if (other.tag == "Projectile")
             {
