@@ -408,7 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 0
-  healthDepletionSpeed: 0.007
+  healthDepletionSpeed: 0.01
   counterTimerMax: 0.2
   healthBar: {fileID: 668188038177024521}
   takeDamage: 1
