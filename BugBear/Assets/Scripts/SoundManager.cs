@@ -13,6 +13,8 @@ namespace Player
         public Slider volumeSlider;
         [HideInInspector] public float masterVolume = 1f;
         private string currentScene;
+        public float initialVolume = 0.5f;
+        private string initialInstall;
 
         private void Awake()
         {
@@ -21,7 +23,6 @@ namespace Player
 
         void Start()
         {
-            
             currentScene = SceneManager.GetActiveScene().name;
 
             if (volumeSlider == null)
@@ -34,6 +35,14 @@ namespace Player
             });
             
             masterVolume = PlayerPrefs.GetFloat("MasterVolume");
+            initialInstall = PlayerPrefs.GetString("InitialInstall", "true");
+
+            if (initialInstall == "true")
+            {
+                PlayerPrefs.SetString("InitialInstall", "false");
+                masterVolume = initialVolume;
+                PlayerPrefs.SetFloat("MasterVolume", initialVolume);
+            }
             volumeSlider.value = masterVolume;
             PlaySceneMusic();
         }

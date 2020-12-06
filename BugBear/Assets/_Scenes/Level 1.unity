@@ -162,7 +162,7 @@ MonoBehaviour:
   shieldSpawnValues: {x: 5, y: 0, z: 16}
   splitSpawnValues: {x: 5, y: 0, z: 16}
   enemyTwoSpawnValues: {x: 0, y: 0, z: 0}
-  enemyCount: 10
+  enemyCount: 12
   foodCount: 1
   nukeCount: 1
   shieldCount: 1
