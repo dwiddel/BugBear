@@ -153,17 +153,20 @@ MonoBehaviour:
   enemy: {fileID: 6465145990485023178, guid: 212c051323b7b5541adb161cae6fb0ea, type: 3}
   food: {fileID: 5370757411914602862, guid: 69772670a3b012a4f8f4f0b4db4a7df8, type: 3}
   nuke: {fileID: 6465145990485023178, guid: f1324b7eb0cb55c438b4c514e78946fd, type: 3}
+  shield: {fileID: 3655408686893389927, guid: da03cf2e9da0da2478f0709d5489c053, type: 3}
   split: {fileID: 3655408686893389927, guid: 378de9925f4c6354fbdea8a71960c155, type: 3}
   enemyTwo: {fileID: 6465145990485023178, guid: fff75a7bcaeb1ee42883771198704d77,
     type: 3}
   enemySpawnValues: {x: 5, y: 0, z: 16}
   foodSpawnValues: {x: 5, y: 0, z: 16}
   nukeSpawnValues: {x: 5, y: 0, z: 16}
+  shieldSpawnValues: {x: 5, y: 0, z: 16}
   splitSpawnValues: {x: 5, y: 0, z: 16}
   enemyTwoSpawnValues: {x: 5, y: 0, z: 16}
   enemyCount: 4
   foodCount: 2
   nukeCount: 1
+  shieldCount: 1
   splitCount: 1
   enemyTwoCount: 2
   enemySpawnWait: 1
@@ -175,6 +178,9 @@ MonoBehaviour:
   nukeSpawnWait: 5
   nukeStartWait: 5
   nukeWaveWait: 5
+  shieldSpawnWait: 5
+  shieldStartWait: 6
+  shieldWaveWait: 5
   splitSpawnWait: 5
   splitStartWait: 5
   splitWaveWait: 4

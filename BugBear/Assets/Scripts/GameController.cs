@@ -13,16 +13,19 @@ namespace Player
         public GameObject enemy;
         public GameObject food;
         public GameObject nuke;
+        public GameObject shield;
         public GameObject split;
         public GameObject enemyTwo;
         public Vector3 enemySpawnValues;
         public Vector3 foodSpawnValues;
         public Vector3 nukeSpawnValues;
+        public Vector3 shieldSpawnValues;
         public Vector3 splitSpawnValues;
         public Vector3 enemyTwoSpawnValues;
         public int enemyCount;
         public int foodCount;
         public int nukeCount;
+        public int shieldCount;
         public int splitCount;
         public int enemyTwoCount;
         public float enemySpawnWait;
@@ -34,6 +37,9 @@ namespace Player
         public float nukeSpawnWait;
         public float nukeStartWait;
         public float nukeWaveWait;
+        public float shieldSpawnWait;
+        public float shieldStartWait;
+        public float shieldWaveWait;
         public float splitSpawnWait;
         public float splitStartWait;
         public float splitWaveWait;
@@ -66,6 +72,7 @@ namespace Player
             StartCoroutine(SpawnEnemyWaves());
             StartCoroutine(SpawnFoodWaves());
             StartCoroutine(SpawnnukeWaves());
+            StartCoroutine(SpawnShieldWaves());
             StartCoroutine(SpawnsplitWaves());
             StartCoroutine(SpawnEnemyTwoWaves());
         }
@@ -107,10 +114,30 @@ namespace Player
                     Vector3 foodspawnPosition = new Vector3(Random.Range(-foodSpawnValues.x, foodSpawnValues.x), foodSpawnValues.y, foodSpawnValues.z);
                     Quaternion foodspawnRotation = Quaternion.identity;
                     Instantiate(food, foodspawnPosition, foodspawnRotation);
+                    Debug.Log("Food Instantiated!");
                     yield return new WaitForSeconds(foodSpawnWait);
                 }
                 //Spawn Food
                 yield return new WaitForSeconds(foodWaveWait);
+                //Wait
+            }
+
+        }
+        IEnumerator SpawnShieldWaves()
+        {
+            yield return new WaitForSeconds(shieldStartWait);
+            while (true)
+            {
+                for (int i = 0, j = 0; i < shieldCount; i++)
+                {
+                    Vector3 shieldspawnPosition = new Vector3(Random.Range(-shieldSpawnValues.x, shieldSpawnValues.x), shieldSpawnValues.y, shieldSpawnValues.z);
+                    Quaternion shieldspawnRotation = Quaternion.identity;
+                    Instantiate(shield, shieldspawnPosition, shieldspawnRotation);
+                    Debug.Log("Shield Instantiated!");
+                    yield return new WaitForSeconds(shieldSpawnWait);
+                }
+                //Spawn Shield Pickup
+                yield return new WaitForSeconds(shieldWaveWait);
                 //Wait
             }
 
@@ -125,6 +152,7 @@ namespace Player
                     Vector3 nukespawnPosition = new Vector3(Random.Range(-nukeSpawnValues.x, nukeSpawnValues.x), nukeSpawnValues.y, nukeSpawnValues.z);
                     Quaternion nukespawnRotation = Quaternion.identity;
                     Instantiate(nuke, nukespawnPosition, nukespawnRotation);
+                    Debug.Log("Nuke Instantiated!");
                     yield return new WaitForSeconds(nukeSpawnWait);
                 }
                 //Spawn Nuke Pickup
@@ -143,6 +171,7 @@ namespace Player
                     Vector3 splitspawnPosition = new Vector3(Random.Range(-splitSpawnValues.x, splitSpawnValues.x), splitSpawnValues.y, splitSpawnValues.z);
                     Quaternion splitspawnRotation = Quaternion.identity;
                     Instantiate(split, splitspawnPosition, splitspawnRotation);
+                    Debug.Log("Split Instantiated!");
                     yield return new WaitForSeconds(splitSpawnWait);
                 }
                 //Spawn Split Pickup
