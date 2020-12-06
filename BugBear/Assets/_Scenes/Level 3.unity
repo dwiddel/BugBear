@@ -176,13 +176,13 @@ MonoBehaviour:
   foodStartWait: 2
   foodWaveWait: 3.5
   nukeSpawnWait: 5
-  nukeStartWait: 5
+  nukeStartWait: 8
   nukeWaveWait: 5
   shieldSpawnWait: 5
   shieldStartWait: 6
   shieldWaveWait: 5
   splitSpawnWait: 5
-  splitStartWait: 5
+  splitStartWait: 4
   splitWaveWait: 4
   enemyTwoSpawnWait: 1
   enemyTwoStartWait: 1

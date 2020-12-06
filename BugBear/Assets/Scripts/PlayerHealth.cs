@@ -11,7 +11,7 @@ namespace Player
         private float counterTimer;
         [HideInInspector] public float maxHealth = 1f;
         [HideInInspector] public float currentHealth;
-        public float healthDepletionSpeed = 0.005f; //Amount that the health declines
+        public float healthDepletionSpeed = 0.01f; //Amount that the health declines
         public float counterTimerMax = 0.1f;
         public Slider healthBar;
         private float previousHealthDivided;

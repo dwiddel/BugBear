@@ -192,4 +192,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4033954198903628318}
-  scoreValue: 15
+  scoreValue: 10

@@ -400,8 +400,8 @@ MonoBehaviour:
   enemy: []
   enemyFollow: []
   splitShot: 0
-  splitShotOnTimer: 5
-  shieldOnTimer: 6
+  splitShotOnTimer: 7
+  shieldOnTimer: 5
 --- !u!1 &7267573848195632345
 GameObject:
   m_ObjectHideFlags: 0

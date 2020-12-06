@@ -13,6 +13,7 @@ namespace Player
         //private Rigidbody2D rigid;
         public int scoreValue;
         private GameController gameController;
+        public float playerDamage = 0.2f;
 
         void Start()
         {
@@ -43,7 +44,7 @@ namespace Player
             if (other.tag == "Player")
             {
                 StartCoroutine(DeathAnimation());
-                PlayerHealth.instance.TakeDamage(0.1f);
+                PlayerHealth.instance.TakeDamage(playerDamage);
             }
             else if (other.tag == "Boundary")
             {

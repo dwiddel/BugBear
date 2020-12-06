@@ -163,25 +163,25 @@ MonoBehaviour:
   splitSpawnValues: {x: 5, y: 0, z: 16}
   enemyTwoSpawnValues: {x: 0, y: 0, z: 0}
   enemyCount: 10
-  foodCount: 3
+  foodCount: 1
   nukeCount: 1
   shieldCount: 1
   splitCount: 1
   enemyTwoCount: 0
-  enemySpawnWait: 0.5
+  enemySpawnWait: 1
   enemyStartWait: 1
   enemyWaveWait: 1
   foodSpawnWait: 1.5
   foodStartWait: 2
   foodWaveWait: 3.5
-  nukeSpawnWait: 5
+  nukeSpawnWait: 7
   nukeStartWait: 5
   nukeWaveWait: 5
-  shieldSpawnWait: 5
+  shieldSpawnWait: 7
   shieldStartWait: 6
   shieldWaveWait: 5
-  splitSpawnWait: 5
-  splitStartWait: 5
+  splitSpawnWait: 7
+  splitStartWait: 3
   splitWaveWait: 4
   enemyTwoSpawnWait: 0
   enemyTwoStartWait: 0
@@ -896,16 +896,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 759732127927470155, guid: b0a7ef011077ef04daad7dd72475c674,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7197561471648413162, guid: b0a7ef011077ef04daad7dd72475c674,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7267573847219703394, guid: b0a7ef011077ef04daad7dd72475c674,
         type: 3}
       propertyPath: m_Name
@@ -965,16 +955,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7267573848195632345, guid: b0a7ef011077ef04daad7dd72475c674,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538508950512174552, guid: b0a7ef011077ef04daad7dd72475c674,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0a7ef011077ef04daad7dd72475c674, type: 3}

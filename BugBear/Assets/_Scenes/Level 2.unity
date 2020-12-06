@@ -163,7 +163,7 @@ MonoBehaviour:
   shieldSpawnValues: {x: 5, y: 0, z: 16}
   splitSpawnValues: {x: 5, y: 0, z: 16}
   enemyTwoSpawnValues: {x: 5, y: 0, z: 16}
-  enemyCount: 4
+  enemyCount: 10
   foodCount: 2
   nukeCount: 1
   shieldCount: 1
@@ -175,14 +175,14 @@ MonoBehaviour:
   foodSpawnWait: 1.5
   foodStartWait: 2
   foodWaveWait: 3.5
-  nukeSpawnWait: 5
+  nukeSpawnWait: 6
   nukeStartWait: 5
   nukeWaveWait: 5
-  shieldSpawnWait: 5
-  shieldStartWait: 6
+  shieldSpawnWait: 6
+  shieldStartWait: 7
   shieldWaveWait: 5
-  splitSpawnWait: 5
-  splitStartWait: 5
+  splitSpawnWait: 6
+  splitStartWait: 3
   splitWaveWait: 4
   enemyTwoSpawnWait: 1
   enemyTwoStartWait: 1
